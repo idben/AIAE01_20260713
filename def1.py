@@ -41,3 +41,15 @@ def hello(name, msg="你好"):
 
 hello(name="小明", msg="早安")
 hello(name="小華")
+print("-"*30)
+
+count = 0
+
+def counter():
+    # function 可以讀取全域變數
+    print(f"目前次數是: {count}")
+    # function 預設無法寫入全域變數
+    count += 1
+
+counter()
+counter()
