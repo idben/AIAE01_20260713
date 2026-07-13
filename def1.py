@@ -32,3 +32,10 @@ print(f"姓名是 {user_name}，年紀是 {user_age}")
 area2 = calc_area(height=9, width=10)
 print(area2)
 print("-"*30)
+
+# 參數的預設值
+def hello(name, msg="你好"):
+    print(f"{name}，{msg}")
+
+hello("小明", "早安")
+hello("小華")
