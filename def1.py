@@ -46,10 +46,19 @@ print("-"*30)
 count = 0
 
 def counter():
+    global count
+    # 使用 global 宣告變數為全域變數後，
+    # function 裡就可以寫入全域變數
     # function 可以讀取全域變數
     print(f"目前次數是: {count}")
     # function 預設無法寫入全域變數
     count += 1
 
+def bug1():
+    global count
+    count = "Hello"
+
 counter()
+counter()
+# bug1()
 counter()
