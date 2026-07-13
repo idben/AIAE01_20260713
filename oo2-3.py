@@ -30,3 +30,40 @@ tank.armor_weight = 10
 
 print(hero.action())
 print(tank.action())
+
+
+print("-"*30)
+
+# 購物車情境
+# [
+#     {"name": "雞蛋", "price": 7, "amount": 8}
+# ]
+
+class Cart:
+    name: str = "機器 unknow"
+    cart: list = []
+
+    def add_to_cart(self, name, price, amount) -> None:
+        # .add_to_cart("雞蛋", 7, 8) # 預計的使用方式
+        self.cart.append({
+            "name": name,
+            "price": price,
+            "amount": amount,
+        })
+
+    def get_sum(self) -> int:
+        total_money = 0
+
+        for item in self.cart:
+            total_money += item["price"] * item["amount"]
+
+        return total_money
+
+cart1 = Cart()
+cart1.name = "Ben iPad"
+cart1.add_to_cart("牛肉調理包", 258, 1)
+cart1.add_to_cart("B 群", 899, 2)
+cart1.add_to_cart("乾麵", 358, 3)
+
+print(cart1.cart)
+print(f"{cart1.name} 消費總金額是 {cart1.get_sum()}")
