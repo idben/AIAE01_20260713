@@ -34,8 +34,10 @@ print(area2)
 print("-"*30)
 
 # 參數的預設值
+# 有預設值的參數要往後面放
+# def hello(msg="你好", name):
 def hello(name, msg="你好"):
     print(f"{name}，{msg}")
 
-hello("小明", "早安")
-hello("小華")
+hello(name="小明", msg="早安")
+hello(name="小華")
