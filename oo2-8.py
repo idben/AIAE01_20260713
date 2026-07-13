@@ -4,7 +4,11 @@ class Student:
     def __init__(self, id: int, name: str):
         self.id = id
         self.name = name
-        self.scores = [0] * len(self.score_name)
+        # 產生和 score_name 一樣長，但值是 0 的 list
+        # 方法 1
+        # self.scores = [0] * len(self.score_name)
+        # 方法 2
+        self.scores = [0 for _ in range(len(self.score_name))]
     
     def add_score(self, score: int, name: str):
         # add_score(90, "國文")
