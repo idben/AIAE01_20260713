@@ -8,7 +8,7 @@ class Cart:
     def __init__(self, name: str):
         self.name = name
         # self.cart = [] 
-        # # 目前類別變數 cart  應該是要做成實例變數較恰當
+        # 目前類別變數 cart  應該是要做成實例變數較恰當
     def add_to_cart(self, name, price, amount) -> None:
         self.cart.append({
             "name": name,
@@ -32,3 +32,19 @@ cart01.add_to_cart("青茶", 35, 2)
 
 print(cart01.cart)
 print(cart02.cart)
+print("-"*30)
+
+
+# 寶可夢情境
+class Eevee:
+    main_kind = "伊布"
+    def __init__(self, kind: str):
+        self.kind = kind
+
+eevee01 = Eevee("未進化伊布")
+eevee02 = Eevee("雷伊布")
+eevee03 = Eevee("月亮伊布")
+
+print(f"{eevee01.kind} 的初始種族是 {eevee01.main_kind}")
+print(f"{eevee02.kind} 的初始種族是 {eevee02.main_kind}")
+print(f"{eevee03.kind} 的初始種族是 {eevee03.main_kind}")
