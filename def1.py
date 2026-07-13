@@ -8,6 +8,14 @@ def calc_area(width, height):
     area = width * height
     return area
 
+def get_user_info():
+    name = "Ben"
+    age = 38
+    # 以 tuple 格式傳出
+    return name, age
+
+
+
 # 使用前需要先定義
 welcome()
 area1 = calc_area(5, 10)
@@ -15,3 +23,5 @@ area1 = calc_area(5, 10)
 # function 沒有 return，無法把結果傳出給外部使用
 print(f"面積是 {area1} 平方公分")
 # print(width, height, area)    # 使用了區域變數
+user_name, user_age = get_user_info()
+print(f"姓名是 {user_name}，年紀是 {user_age}")
